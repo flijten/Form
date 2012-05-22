@@ -36,7 +36,7 @@ class FormElementBase implements FormElementInterface
 	 */
 	public function getTitle()
 	{
-		return $this->getTitle();
+		return $this->title;
 	}
 
 	public function setValue($value)
@@ -47,6 +47,19 @@ class FormElementBase implements FormElementInterface
 	public function getValue()
 	{
 		return $this->value;
+	}
+
+	public function isValid()
+	{
+		$valid = true;
+
+		foreach ($this->getValidators() as $Validator) {
+			if ( ! $Validator->isValid()) {
+				$valid = false;
+			}
+		}
+
+		return $valid;
 	}
 
 	/**

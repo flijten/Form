@@ -30,4 +30,9 @@ interface FormElementInterface
 	 * @return array
 	 */
 	public function getValidators();
+
+	/**
+	 * @return boolean
+	 */
+	public function isValid();
 }

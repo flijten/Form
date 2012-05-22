@@ -7,6 +7,8 @@ class FormElementTemplateFactory
 	{
 		if ($FormElement instanceof FormElementText) {
 			return str_replace(array('##formElementId##', '##formElementTitle##'), array($FormElement->getId(), $FormElement->getTitle()), $this->getFormElementTextTemplate());
+		} else if ($FormElement instanceof FormElementInteger) {
+			return str_replace(array('##formElementId##', '##formElementTitle##'), array($FormElement->getId(), $FormElement->getTitle()), $this->getFormElementIntegerTemplate());
 		}
 	}
 

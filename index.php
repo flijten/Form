@@ -4,7 +4,11 @@ require_once __DIR__ . '/src/AutoLoader.php';
 
 $Form = new \src\Form();
 $Form->addFormElement( new \src\FormElementText('Test') );
-$Form->addFormElement( new \src\FormElementInteger('Test') );
+$FormElementInteger = new \src\FormElementInteger('Integer');
+$FormElementInteger->setValue('asd');
+$Form->addFormElement( $FormElementInteger );
 
 echo $Form;
+
+var_dump($Form->isValid());
 

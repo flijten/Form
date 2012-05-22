@@ -17,6 +17,20 @@ class Form implements FormElementAggregator
 		$this->elements->addElement($Element);
 	}
 
+	public function isValid()
+	{
+		$valid = true;
+
+		foreach ($this->elements as $FormElement) {
+			if ($FormElement->isValid()) {
+				$valid = false;
+				break;
+			}
+		}
+
+		return $valid;
+	}
+
 	public function __toString()
 	{
 		$string = '';
