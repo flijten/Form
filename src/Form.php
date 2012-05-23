@@ -28,7 +28,7 @@ class Form implements FormElementAggregator
 		$valid = true;
 
 		foreach ($this->elements as $FormElement) {
-			if ($FormElement->isValid()) {
+			if ( ! $FormElement->isValid()) {
 				$valid = false;
 				break;
 			}
