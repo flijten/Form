@@ -56,6 +56,7 @@ class FormElementBase implements FormElementInterface
 		foreach ($this->getValidators() as $Validator) {
 			if ( ! $Validator->isValid()) {
 				$valid = false;
+				break;
 			}
 		}
 
