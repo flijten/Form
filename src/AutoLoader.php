@@ -1,6 +1,13 @@
 <?php
 namespace src;
 
+function r($input)
+{
+	echo "<pre>";
+	echo print_r($input, true);
+	echo "</pre>";
+}
+
 class AutoLoader
 {
 	public static function register()
