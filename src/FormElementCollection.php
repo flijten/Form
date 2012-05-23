@@ -1,20 +1,43 @@
 <?php
 namespace src;
 use Iterator;
+use ArrayAccess;
 class FormElementCollection implements Iterator
 {
+	/**
+	 * @var int
+	 */
 	private $position;
+
+	/**
+	 * @var array
+	 */
 	private $elements;
 
+	/**
+	 * @param array $elements
+	 */
 	public function __construct(array $elements = array())
 	{
 		$this->elements = $elements;
 		$this->position = 0;
 	}
 
-	public function addElement(FormElementInterface $Element)
+	/**
+	 * @param FormElementInterface $Element
+	 */
+	public function addFormElement(FormElementInterface $Element)
 	{
 		$this->elements[] = $Element;
+	}
+
+	/**
+	 * @param 	int $position
+	 * @return 	FormElementInterface
+	 */
+	public function getElementAt($position)
+	{
+		return $this->elements[$position - 1];
 	}
 
 	//iterator functions

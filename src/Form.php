@@ -12,11 +12,17 @@ class Form implements FormElementAggregator
 		$this->elements = new FormElementCollection();
 	}
 
+	/**
+	 * @param FormElementInterface $Element
+	 */
 	public function addFormElement(FormElementInterface $Element)
 	{
-		$this->elements->addElement($Element);
+		$this->elements->addFormElement($Element);
 	}
 
+	/**
+	 * @return bool
+	 */
 	public function isValid()
 	{
 		$valid = true;
@@ -31,6 +37,9 @@ class Form implements FormElementAggregator
 		return $valid;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function __toString()
 	{
 		$string = '';
