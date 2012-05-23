@@ -23,7 +23,7 @@ class ValidatorInteger implements ValidatorInterface
 	{
 		$value = $this->FormElement->getValue();
 
-		return filter_var($value, FILTER_VALIDATE_INT);
+		return (filter_var($value, FILTER_VALIDATE_INT) !== false);
 	}
 
 }
