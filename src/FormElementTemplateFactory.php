@@ -12,12 +12,14 @@ class FormElementTemplateFactory
 	 */
 	public function getTemplate(FormElementInterface $FormElement)
 	{
-		if ($FormElement instanceof FormElementText) {
+		if ($FormElement instanceof \src\FormElements\FormElementText) {
 			return str_replace(array('##formElementId##', '##formElementTitle##', '##formElementValue##'), array($FormElement->getId(), $FormElement->getTitle(), $FormElement->getValue()), $this->getFormElementTextTemplate());
-		} else if ($FormElement instanceof FormElementInteger) {
+		} else if ($FormElement instanceof \src\FormElements\FormElementInteger) {
 			return str_replace(array('##formElementId##', '##formElementTitle##', '##formElementValue##'), array($FormElement->getId(), $FormElement->getTitle(), $FormElement->getValue()), $this->getFormElementIntegerTemplate());
-		} else if ($FormElement instanceof FormElementHidden) {
+		} else if ($FormElement instanceof \src\FormElements\FormElementHidden) {
 			return str_replace(array('##formElementId##', '##formElementValue##'), array($FormElement->getId(), $FormElement->getValue()), $this->getFormElementHiddenTemplate());
+		} else if ($FormElement instanceof \src\FormElements\FormElementSubmit) {
+			return str_replace(array('##formElementId##', '##formElementTitle##'), array($FormElement->getId(), $FormElement->getTitle()), $this->getFormElementSubmitTemplate());
 		}
 	}
 
@@ -34,5 +36,10 @@ class FormElementTemplateFactory
 	private function getFormElementHiddenTemplate()
 	{
 		return '<input id="##formElementId##" type="hidden" value="##formElementValue##"/>';
+	}
+
+	private function getFormElementSubmitTemplate()
+	{
+		return '<button id="##formElementId##" type="submit">##formElementTitle##</button>';
 	}
 }
