@@ -25,21 +25,21 @@ class FormElementTemplateFactory
 
 	private function getFormElementTextTemplate()
 	{
-		return '<label for="##formElementId##">##formElementTitle##</label><input id="##formElementId##" type="text" value="##formElementValue##"/>';
+		return '<label for="##formElementId##">##formElementTitle##</label><input id="##formElementId##" name="##formElementId##" type="text" value="##formElementValue##"/>';
 	}
 
 	private function getFormElementIntegerTemplate()
 	{
-		return '<label for="##formElementId##">##formElementTitle##</label><input id="##formElementId##" type="text" value="##formElementValue##"/>';
+		return '<label for="##formElementId##">##formElementTitle##</label><input id="##formElementId##" name="##formElementId##" type="text" value="##formElementValue##"/>';
 	}
 
 	private function getFormElementHiddenTemplate()
 	{
-		return '<input id="##formElementId##" type="hidden" value="##formElementValue##"/>';
+		return '<input id="##formElementId##" name="##formElementId##" type="hidden" value="##formElementValue##"/>';
 	}
 
 	private function getFormElementSubmitTemplate()
 	{
-		return '<button id="##formElementId##" type="submit">##formElementTitle##</button>';
+		return '<button id="##formElementId##" name="##formElementId##" type="submit">##formElementTitle##</button>';
 	}
 }
