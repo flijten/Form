@@ -2,6 +2,7 @@
 
 namespace src;
 use src\FormElementAggregator;
+use src\FormElements\FormElementHidden;
 
 class Form implements FormElementAggregator
 {
@@ -10,8 +11,11 @@ class Form implements FormElementAggregator
 
 	public function __construct($id)
 	{
-		$this->elements = new FormElementCollection();
 		$this->id = $id;
+		$SubmissionCheck = new FormElementHidden('hidden name??', 'form_submitted_' . $this->id);
+		$SubmissionCheck->setValue(1);
+		$this->elements = new FormElementCollection();
+		$this->elements->addFormElement($SubmissionCheck);
 	}
 
 	/**
@@ -39,6 +43,11 @@ class Form implements FormElementAggregator
 		return $valid;
 	}
 
+	public function isSubmitted()
+	{
+		return isset($_REQUEST['form_submitted_' . $this->id]);
+	}
+
 	/**
 	 * @todo all logic should go to a renderer class.
 	 * Maybe toString should not be used at all? Renderer::render($Form) ??
@@ -47,7 +56,7 @@ class Form implements FormElementAggregator
 	 */
 	public function __toString()
 	{
-		$string = '<form id="' . $this->id . '">' ;
+		$string = '<form id="' . $this->id . '" method="post">' ;
 
 		$TemplateFactory = new FormElementTemplateFactory();
 
