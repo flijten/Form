@@ -8,7 +8,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 {
 	public function testInvalidElementShouldFailCompleteForm()
 	{
-		$Form = new Form();
+		$Form = new Form('id');
 
 		$TextElement = new FormElementText('text field');
 		$TextElement->setValue('text value');
@@ -24,7 +24,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 
 	public function testValidElementsShouldResultInValidForm()
 	{
-		$Form = new Form();
+		$Form = new Form('id');
 		$TextElement = new FormElementText('text field');
 		$TextElement->setValue('text value');
 		$Form->addFormElement($TextElement);

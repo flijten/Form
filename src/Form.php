@@ -6,10 +6,12 @@ use src\FormElementAggregator;
 class Form implements FormElementAggregator
 {
 	private $elements;
+	private $id;
 
-	public function __construct()
+	public function __construct($id)
 	{
 		$this->elements = new FormElementCollection();
+		$this->id = $id;
 	}
 
 	/**
