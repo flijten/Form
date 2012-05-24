@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>FormElementAggregator.php</title>
+    <title>FormElementHidden.php</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="container.css">
     <script type="text/javascript" src="yahoo-dom-event.js"></script>
@@ -12,7 +12,7 @@
 
   <body class="yui-skin-sam">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr><td class="title">FormElementAggregator.php</td></tr>
+      <tr><td class="title">FormElementHidden.php</td></tr>
       <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
 
       <tr>
@@ -20,7 +20,7 @@
           <table cellpadding="1" border="0" width="100%">
             <tr>
               <td class="headerItem" width="20%">Current file:</td>
-              <td class="headerValue" width="80%"><a href="index.html"></a> / <a href="home.html">home</a> / <a href="home_data.html">data</a> / <a href="home_data_www.html">www</a> / <a href="home_data_www_form.html">form</a> / <a href="home_data_www_form_src.html">src</a> / <a href="home_data_www_form_src_FormElementAggregator.php.html">FormElementAggregator.php</a></td>
+              <td class="headerValue" width="80%"><a href="index.html"></a> / <a href="home.html">home</a> / <a href="home_data.html">data</a> / <a href="home_data_www.html">www</a> / <a href="home_data_www_form.html">form</a> / <a href="home_data_www_form_src.html">src</a> / <a href="home_data_www_form_src_FormElementHidden.php.html">FormElementHidden.php</a></td>
             </tr>
             <tr>
               <td class="legendItem" width="20%">Legend:</td>
@@ -56,12 +56,12 @@
         <tr>
           <td class="coverDirectory">Total</td>
           <td class="coverBar">
-             <div class="coverBarOutline" title="100.00%">
-                <div class="size snow"  style="width:100%" title="100.00%"></div>
+             <div class="coverBarOutline" title="0.00%">
+                <div class="size scarlet_red"  style="width:0%" title="0.00%"></div>
              </div>
           </td>
-          <td class="coverPerNone">100.00%</td>
-          <td class="coverNumNone">&nbsp;</td>
+          <td class="coverPerLo">0.00%</td>
+          <td class="coverNumLo">0 / 1</td>
           <td class="coverBar">
             <div class="coverBarOutline" title="100.00%">
                 <div class="size snow"  style="width:100%" title="100.00%"></div>
@@ -71,12 +71,38 @@
           <td class="coverNumNone">&nbsp;</td>
           <td class="crap"></td>
           <td class="coverBar">
-            <div class="coverBarOutline" title="100.00%">
-                <div class="size chameleon"  style="width:100%" title="100.00%"></div>
+            <div class="coverBarOutline" title="0.00%">
+                <div class="size scarlet_red"  style="width:0%" title="0.00%"></div>
             </div>
+          </td>
+          <td class="coverPerLo">0.00%</td>
+          <td class="coverNumLo">0 / 1</td>
+        </tr>
+
+        <tr>
+          <td class="coverDirectory">FormElementHidden</td>
+          <td class="coverBar">
+             <div class="coverBarOutline" title="100.00%">
+                <div class="size chameleon"  style="width:100%" title="100.00%"></div>
+             </div>
           </td>
           <td class="coverPerHi">100.00%</td>
           <td class="coverNumHi">1 / 1</td>
+          <td class="coverBar">
+            <div class="coverBarOutline" title="100.00%">
+                <div class="size snow"  style="width:100%" title="100.00%"></div>
+            </div>
+          </td>
+          <td class="coverPerNone">100.00%</td>
+          <td class="coverNumNone">&nbsp;</td>
+          <td class="crap"></td>
+          <td class="coverBar">
+            <div class="coverBarOutline" title="0.00%">
+                <div class="size scarlet_red"  style="width:0%" title="0.00%"></div>
+            </div>
+          </td>
+          <td class="coverPerLo">0.00%</td>
+          <td class="coverNumLo">0 / 1</td>
         </tr>
 
 
@@ -92,13 +118,14 @@
       <tr>
         <td>
 <pre class="source">
-<span class="lineNum" id="container1"><a name="1"></a><a href="#1" id="line1">       1</a> </span>                : &lt;?php                                                             
-<span class="lineNum" id="container2"><a name="2"></a><a href="#2" id="line2">       2</a> </span>                : namespace src;                                                    
-<span class="lineNum" id="container3"><a name="3"></a><a href="#3" id="line3">       3</a> </span>                :                                                                   
-<span class="lineNum" id="container4"><a name="4"></a><a href="#4" id="line4">       4</a> </span><span class="lineCov">              1 : interface FormElementAggregator                                   </span>
-<span class="lineNum" id="container5"><a name="5"></a><a href="#5" id="line5">       5</a> </span>                : {                                                                 
-<span class="lineNum" id="container6"><a name="6"></a><a href="#6" id="line6">       6</a> </span>                :     public function addFormElement(FormElementInterface $Element);
-<span class="lineNum" id="container7"><a name="7"></a><a href="#7" id="line7">       7</a> </span>                : }                                                                 
+<span class="lineNum" id="container1"><a name="1"></a><a href="#1" id="line1">       1</a> </span>                : &lt;?php
+<span class="lineNum" id="container2"><a name="2"></a><a href="#2" id="line2">       2</a> </span>                : namespace src;
+<span class="lineNum" id="container3"><a name="3"></a><a href="#3" id="line3">       3</a> </span>                : use src\FormElements\FormElementBase;
+<span class="lineNum" id="container4"><a name="4"></a><a href="#4" id="line4">       4</a> </span>                :
+<span class="lineNum" id="container5"><a name="5"></a><a href="#5" id="line5">       5</a> </span>                : class FormElementHidden extends FormElementBase
+<span class="lineNum" id="container6"><a name="6"></a><a href="#6" id="line6">       6</a> </span><span class="lineNoCov">              0 : {                                              </span>
+<span class="lineNum" id="container7"><a name="7"></a><a href="#7" id="line7">       7</a> </span>                :
+<span class="lineNum" id="container8"><a name="8"></a><a href="#8" id="line8">       8</a> </span>                : }
 
 </pre>
         </td>
@@ -107,7 +134,7 @@
 
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
-      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.1.0</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.13-1~dotdeb.0</a> and PHPUnit 3.6.0 at Thu May 24 9:02:41 CEST 2012.</td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.1.0</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.13-1~dotdeb.0</a> and PHPUnit 3.6.0 at Thu May 24 8:24:43 CEST 2012.</td></tr>
     </table>
 
     <br />
@@ -117,11 +144,6 @@
       $E = YAHOO.util.Event;
       YAHOO.namespace("phpunit.container");
       YAHOO.phpunit.container.panelsData = {
-        "panel4": {
-          "header": "1 test covers line 4",
-          "body": "<ul><li class=\"testPassed\">ValidatorTest::testInvalidElementShouldFailCompleteForm</li></ul>",
-          "footer": ""
-        },
       "dummy": ""
       };
 

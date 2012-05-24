@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>ValidatorInterface.php</title>
+    <title>FormElementText.php</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="container.css">
     <script type="text/javascript" src="yahoo-dom-event.js"></script>
@@ -12,7 +12,7 @@
 
   <body class="yui-skin-sam">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr><td class="title">ValidatorInterface.php</td></tr>
+      <tr><td class="title">FormElementText.php</td></tr>
       <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
 
       <tr>
@@ -20,7 +20,7 @@
           <table cellpadding="1" border="0" width="100%">
             <tr>
               <td class="headerItem" width="20%">Current file:</td>
-              <td class="headerValue" width="80%"><a href="index.html"></a> / <a href="home.html">home</a> / <a href="home_data.html">data</a> / <a href="home_data_www.html">www</a> / <a href="home_data_www_form.html">form</a> / <a href="home_data_www_form_src.html">src</a> / <a href="home_data_www_form_src_ValidatorInterface.php.html">ValidatorInterface.php</a></td>
+              <td class="headerValue" width="80%"><a href="index.html"></a> / <a href="home.html">home</a> / <a href="home_data.html">data</a> / <a href="home_data_www.html">www</a> / <a href="home_data_www_form.html">form</a> / <a href="home_data_www_form_src.html">src</a> / <a href="home_data_www_form_src_FormElements.html">FormElements</a> / <a href="home_data_www_form_src_FormElements_FormElementText.php.html">FormElementText.php</a></td>
             </tr>
             <tr>
               <td class="legendItem" width="20%">Legend:</td>
@@ -57,11 +57,37 @@
           <td class="coverDirectory">Total</td>
           <td class="coverBar">
              <div class="coverBarOutline" title="100.00%">
-                <div class="size snow"  style="width:100%" title="100.00%"></div>
+                <div class="size chameleon"  style="width:100%" title="100.00%"></div>
              </div>
+          </td>
+          <td class="coverPerHi">100.00%</td>
+          <td class="coverNumHi">1 / 1</td>
+          <td class="coverBar">
+            <div class="coverBarOutline" title="100.00%">
+                <div class="size snow"  style="width:100%" title="100.00%"></div>
+            </div>
           </td>
           <td class="coverPerNone">100.00%</td>
           <td class="coverNumNone">&nbsp;</td>
+          <td class="crap"></td>
+          <td class="coverBar">
+            <div class="coverBarOutline" title="100.00%">
+                <div class="size chameleon"  style="width:100%" title="100.00%"></div>
+            </div>
+          </td>
+          <td class="coverPerHi">100.00%</td>
+          <td class="coverNumHi">1 / 1</td>
+        </tr>
+
+        <tr>
+          <td class="coverDirectory">FormElementText</td>
+          <td class="coverBar">
+             <div class="coverBarOutline" title="100.00%">
+                <div class="size chameleon"  style="width:100%" title="100.00%"></div>
+             </div>
+          </td>
+          <td class="coverPerHi">100.00%</td>
+          <td class="coverNumHi">1 / 1</td>
           <td class="coverBar">
             <div class="coverBarOutline" title="100.00%">
                 <div class="size snow"  style="width:100%" title="100.00%"></div>
@@ -92,21 +118,14 @@
       <tr>
         <td>
 <pre class="source">
-<span class="lineNum" id="container1"><a name="1"></a><a href="#1" id="line1">       1</a> </span>                : &lt;?php                                                              
-<span class="lineNum" id="container2"><a name="2"></a><a href="#2" id="line2">       2</a> </span>                : namespace src;                                                     
-<span class="lineNum" id="container3"><a name="3"></a><a href="#3" id="line3">       3</a> </span>                :                                                                    
-<span class="lineNum" id="container4"><a name="4"></a><a href="#4" id="line4">       4</a> </span><span class="lineCov">              1 : interface ValidatorInterface                                       </span>
-<span class="lineNum" id="container5"><a name="5"></a><a href="#5" id="line5">       5</a> </span>                : {                                                                  
-<span class="lineNum" id="container6"><a name="6"></a><a href="#6" id="line6">       6</a> </span>                :     /**                                                            
-<span class="lineNum" id="container7"><a name="7"></a><a href="#7" id="line7">       7</a> </span>                :      * @param FormElementInterface $FormElement                    
-<span class="lineNum" id="container8"><a name="8"></a><a href="#8" id="line8">       8</a> </span>                :      */                                                            
-<span class="lineNum" id="container9"><a name="9"></a><a href="#9" id="line9">       9</a> </span>                :     public function __construct(FormElementInterface $FormElement);
-<span class="lineNum" id="container10"><a name="10"></a><a href="#10" id="line10">      10</a> </span>                :                                                                    
-<span class="lineNum" id="container11"><a name="11"></a><a href="#11" id="line11">      11</a> </span>                :     /**                                                            
-<span class="lineNum" id="container12"><a name="12"></a><a href="#12" id="line12">      12</a> </span>                :      * @return boolean                                             
-<span class="lineNum" id="container13"><a name="13"></a><a href="#13" id="line13">      13</a> </span>                :      */                                                            
-<span class="lineNum" id="container14"><a name="14"></a><a href="#14" id="line14">      14</a> </span>                :     public function isValid();                                     
-<span class="lineNum" id="container15"><a name="15"></a><a href="#15" id="line15">      15</a> </span>                : }                                                                  
+<span class="lineNum" id="container1"><a name="1"></a><a href="#1" id="line1">       1</a> </span>                : &lt;?php                                        
+<span class="lineNum" id="container2"><a name="2"></a><a href="#2" id="line2">       2</a> </span>                : namespace src\FormElements;                  
+<span class="lineNum" id="container3"><a name="3"></a><a href="#3" id="line3">       3</a> </span>                : use src\FormElements\FormElementBase;        
+<span class="lineNum" id="container4"><a name="4"></a><a href="#4" id="line4">       4</a> </span>                :                                              
+<span class="lineNum" id="container5"><a name="5"></a><a href="#5" id="line5">       5</a> </span>                : class FormElementText extends FormElementBase
+<span class="lineNum" id="container6"><a name="6"></a><a href="#6" id="line6">       6</a> </span><span class="lineCov">              1 : {                                            </span>
+<span class="lineNum" id="container7"><a name="7"></a><a href="#7" id="line7">       7</a> </span>                :                                              
+<span class="lineNum" id="container8"><a name="8"></a><a href="#8" id="line8">       8</a> </span>                : }                                            
 
 </pre>
         </td>
@@ -125,9 +144,9 @@
       $E = YAHOO.util.Event;
       YAHOO.namespace("phpunit.container");
       YAHOO.phpunit.container.panelsData = {
-        "panel4": {
-          "header": "1 test covers line 4",
-          "body": "<ul><li class=\"testPassed\">ValidatorTest::testInvalidElementShouldFailCompleteForm</li></ul>",
+        "panel6": {
+          "header": "1 test covers line 6",
+          "body": "<ul><li class=\"testPassed\">ElementCollectionTest::testElementShouldBeAggregatedInOrderOfAddition</li></ul>",
           "footer": ""
         },
       "dummy": ""
