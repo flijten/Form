@@ -40,6 +40,9 @@ class Form implements FormElementAggregator
 	}
 
 	/**
+	 * @todo all logic should go to a renderer class.
+	 * Maybe toString should not be used at all? Renderer::render($Form) ??
+	 *
 	 * @return string
 	 */
 	public function __toString()
