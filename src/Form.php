@@ -44,13 +44,15 @@ class Form implements FormElementAggregator
 	 */
 	public function __toString()
 	{
-		$string = '';
+		$string = '<form id="' . $this->id . '">' ;
 
 		$TemplateFactory = new FormElementTemplateFactory();
 
 		foreach ($this->elements as $FormElement) {
 			$string .= $TemplateFactory->getTemplate($FormElement);
 		}
+
+		$string .= '</form>';
 
 		return $string;
 	}
