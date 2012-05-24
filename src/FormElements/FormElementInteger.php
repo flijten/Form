@@ -1,6 +1,6 @@
 <?php
-namespace src;
-use src\FormElementBase;
+namespace src\FormElements;
+use src\FormElements\FormElementBase;
 use src\ValidatorInteger;
 
 class FormElementInteger extends FormElementBase

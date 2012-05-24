@@ -1,8 +1,8 @@
 <?php
 use src\Form;
 use src\ValidatorInteger;
-use src\FormElementInteger;
-use src\FormElementText;
+use src\FormElements\FormElementInteger;
+use src\FormElements\FormElementText;
 
 class ValidatorTest extends PHPUnit_Framework_TestCase
 {
@@ -39,7 +39,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 
 	public function testValidatorIntegerShouldFailOnText()
 	{
-		$FormElementInteger = new \src\FormElementInteger('Integer');
+		$FormElementInteger = new FormElementInteger('Integer');
 		$FormElementInteger->setValue('asd');
 		$Validator = new ValidatorInteger($FormElementInteger);
 
@@ -48,7 +48,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 
 	public function testValidatorIntegerShouldFailFloatingPointNumbers()
 	{
-		$FormElementInteger = new \src\FormElementInteger('Integer');
+		$FormElementInteger = new FormElementInteger('Integer');
 		$FormElementInteger->setValue(123.15);
 		$Validator = new ValidatorInteger($FormElementInteger);
 
@@ -57,7 +57,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 
 	public function testValidatorIntegerShouldSucceedOnIntegers()
 	{
-		$FormElementInteger = new \src\FormElementInteger('Integer');
+		$FormElementInteger = new FormElementInteger('Integer');
 		$FormElementInteger->setValue(123);
 		$Validator = new ValidatorInteger($FormElementInteger);
 

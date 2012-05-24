@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace src\FormElements;
 use src\FormElementInterface;
 
 class FormElementBase implements FormElementInterface

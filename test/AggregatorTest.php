@@ -1,4 +1,5 @@
 <?php
+use src\FormElements\FormElementText;
 
 class ElementCollectionTest extends PHPUnit_Framework_TestCase
 {
@@ -8,8 +9,8 @@ class ElementCollectionTest extends PHPUnit_Framework_TestCase
 		$elementTitle2 = 'element 2';
 
 		$ElementCollection = new \src\FormElementCollection();
-		$ElementCollection->addFormElement(new \src\FormElementText($elementTitle1));
-		$ElementCollection->addFormElement(new \src\FormElementText($elementTitle2));
+		$ElementCollection->addFormElement(new FormElementText($elementTitle1));
+		$ElementCollection->addFormElement(new FormElementText($elementTitle2));
 
 		$Element1 = $ElementCollection->getElementAt(1);
 		$this->assertSame($elementTitle1, $Element1->getTitle());
